@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from "react";
 import { api } from "./api";
-import AuthPage from "./components/AuthPage";
+import Authpage from "./components/Authpage";
 import ChatLayout from "./components/ChatLayout";
 
 export default function App() {
@@ -37,7 +37,7 @@ export default function App() {
 
   if (!user) {
     return (
-      <AuthPage
+      <Authpage
         onLoginSuccess={async () => {
           try {
             const currentUser = await api.me();
