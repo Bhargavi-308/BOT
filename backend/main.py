@@ -11,7 +11,9 @@ app = FastAPI(title="AI Chatbot API")
 
 origins = [
     "http://localhost:5173",
+    "http://127.0.0.1:5173",
     "https://bot-wheat-gamma.vercel.app",
+    "https://bot-8qomm2g5y-bhargavi-308s-projects.vercel.app",
 ]
 
 app.add_middleware(
