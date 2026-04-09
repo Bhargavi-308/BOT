@@ -9,6 +9,11 @@ Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="AI Chatbot API")
 
+origins = [
+    "http://localhost:5173",
+    "https://bot-wheat-gamma.vercel.app",
+]
+
 app.add_middleware(
     CORSMiddleware,
      allow_origins=[
