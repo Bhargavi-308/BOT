@@ -5,10 +5,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 load_dotenv(os.path.join(BASE_DIR, ".env"))
 
 class Settings:
-    DATABASE_URL: str = os.getenv(
-        "DATABASE_URL",
-        "postgresql+psycopg2://postgres:12345@localhost:5432/chatbot",
-    )
+    DATABASE_URL: str = os.getenv("DATABASE_URL")
     SECRET_KEY: str = os.getenv("SECRET_KEY", "change-this-secret-key")
     ALGORITHM: str = os.getenv("ALGORITHM", "HS256")
     ACCESS_TOKEN_EXPIRE_MINUTES: int = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", "1440"))
